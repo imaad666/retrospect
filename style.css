@@ -1,0 +1,338 @@
+/* Early 2000s Nostalgic Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', cursive;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #4facfe 75%, #00f2fe 100%);
+    background-attachment: fixed;
+    min-height: 100vh;
+    padding: 20px;
+    color: #333;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    border: 5px ridge #ff69b4;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(to bottom, #ff69b4, #ff1493);
+    padding: 20px;
+    text-align: center;
+    border-bottom: 5px groove #ff1493;
+}
+
+header h1 {
+    color: white;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+    font-size: 2.5em;
+    animation: rainbow 3s infinite;
+}
+
+@keyframes rainbow {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+.tagline {
+    color: #ffffcc;
+    font-size: 1.2em;
+    margin-top: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.marquee {
+    background: #ffffcc;
+    border: 3px dotted #ff69b4;
+    margin-top: 15px;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+marquee {
+    color: #ff1493;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+/* Main Content */
+.main-content {
+    padding: 30px;
+    background: linear-gradient(to bottom, #fff9e6, #ffe6f0);
+}
+
+.add-note-section,
+.notes-section {
+    background: white;
+    border: 4px double #9370db;
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    color: #9370db;
+    text-shadow: 2px 2px 4px rgba(147, 112, 219, 0.3);
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    color: #ff1493;
+    font-weight: bold;
+    margin-bottom: 8px;
+    font-size: 1.1em;
+}
+
+input[type="text"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 3px solid #ff69b4;
+    border-radius: 10px;
+    font-family: 'Comic Sans MS', cursive;
+    font-size: 1em;
+    background: #fffacd;
+    transition: all 0.3s;
+}
+
+input[type="text"]:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #9370db;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(147, 112, 219, 0.5);
+}
+
+textarea {
+    resize: vertical;
+}
+
+.btn-submit {
+    background: linear-gradient(to bottom, #ff69b4, #ff1493);
+    color: white;
+    border: 3px outset #ff1493;
+    padding: 12px 30px;
+    font-size: 1.2em;
+    font-family: 'Comic Sans MS', cursive;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s;
+}
+
+.btn-submit:hover {
+    background: linear-gradient(to bottom, #ff1493, #ff69b4);
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(255, 20, 147, 0.5);
+}
+
+.btn-submit:active {
+    border-style: inset;
+    transform: scale(0.98);
+}
+
+/* Filter Buttons */
+.filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.filter-btn {
+    background: linear-gradient(to bottom, #87ceeb, #4682b4);
+    color: white;
+    border: 2px outset #4682b4;
+    padding: 8px 16px;
+    font-family: 'Comic Sans MS', cursive;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.filter-btn:hover {
+    background: linear-gradient(to bottom, #4682b4, #87ceeb);
+    transform: translateY(-2px);
+}
+
+.filter-btn.active {
+    background: linear-gradient(to bottom, #ffd700, #ffa500);
+    border-color: #ffa500;
+}
+
+/* Notes Container */
+.notes-container {
+    display: grid;
+    gap: 20px;
+}
+
+.note-card {
+    background: linear-gradient(135deg, #fffacd 0%, #fff9e6 100%);
+    border: 4px ridge #ff69b4;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s;
+    animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.note-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.note-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin-bottom: 15px;
+    border-bottom: 2px dotted #ff69b4;
+    padding-bottom: 10px;
+}
+
+.note-title {
+    color: #9370db;
+    font-size: 1.4em;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(147, 112, 219, 0.3);
+}
+
+.note-category {
+    background: linear-gradient(to right, #ff69b4, #ff1493);
+    color: white;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 0.9em;
+    border: 2px solid #ff1493;
+}
+
+.note-content {
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    font-size: 1.05em;
+}
+
+.note-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9em;
+    color: #666;
+}
+
+.note-date {
+    font-style: italic;
+}
+
+.btn-delete {
+    background: linear-gradient(to bottom, #ff6b6b, #ee5a6f);
+    color: white;
+    border: 2px outset #ee5a6f;
+    padding: 6px 12px;
+    font-family: 'Comic Sans MS', cursive;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-delete:hover {
+    background: linear-gradient(to bottom, #ee5a6f, #ff6b6b);
+    transform: scale(1.05);
+}
+
+.btn-delete:active {
+    border-style: inset;
+}
+
+.empty-state {
+    text-align: center;
+    color: #9370db;
+    font-size: 1.2em;
+    padding: 40px;
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(to top, #ff69b4, #ff1493);
+    padding: 20px;
+    text-align: center;
+    border-top: 5px groove #ff1493;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.visitor-counter {
+    margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    .main-content {
+        padding: 15px;
+    }
+
+    .filter-buttons {
+        justify-content: center;
+    }
+}
+
+/* Fun cursor effect */
+body {
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><circle cx="10" cy="10" r="8" fill="%23ff69b4" stroke="%23fff" stroke-width="2"/></svg>'), auto;
+}
+
+button,
+a {
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><circle cx="10" cy="10" r="8" fill="%239370db" stroke="%23fff" stroke-width="2"/></svg>'), pointer;
+}
+
+/* Made with Bob */

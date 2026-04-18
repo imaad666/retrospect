@@ -1,0 +1,89 @@
+===================================================================
+--- /dev/null
++++ index.html
+@@ -0,0 +1,71 @@
++
+<!DOCTYPE html>
++<html lang="en">
++
+
+<head>
+    +
+    <meta charset="UTF-8">
+    +
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    + <title>retro$pect</title>
+    +
+    <link rel="stylesheet" href="style.css">
+    +
+</head>
++
+
+<body>
+    + <div class="container">
+        + <header>
+            + <h1>retro$pect</h1>
+            + <p class="tagline">~ Save your thoughts, wishes & memories ~</p>
+            + <div class="marquee">
+                + <marquee behavior="scroll" direction="left">Welcome to your personal space! 💫 Write your heart out!
+                    🌟 Come back anytime! 💖</marquee>
+                + </div>
+            + </header>
+        +
+        + <div class="main-content">
+            + <div class="add-note-section">
+                + <h2>📝 Add a New Entry</h2>
+                + <form id="noteForm">
+                    + <div class="form-group">
+                        + <label for="noteTitle">Title:</label>
+                        + <input type="text" id="noteTitle" placeholder="Give your entry a title..." required>
+                        + </div>
+                    + <div class="form-group">
+                        + <label for="noteCategory">Category:</label>
+                        + <select id="noteCategory">
+                            + <option value="wish">🌟 Wish</option>
+                            + <option value="memory">💭 Memory</option>
+                            + <option value="note">📌 Note</option>
+                            + <option value="goal">🎯 Goal</option>
+                            + <option value="gratitude">💖 Gratitude</option>
+                            + </select>
+                        + </div>
+                    + <div class="form-group">
+                        + <label for="noteContent">Your thoughts:</label>
+                        + <textarea id="noteContent" rows="6" placeholder="Write your heart out..." required></textarea>
+                        + </div>
+                    + <button type="submit" class="btn-submit">💾 Save Entry</button>
+                    + </form>
+                + </div>
+            +
+            + <div class="notes-section">
+                + <h2>📚 Your Entries</h2>
+                + <div class="filter-buttons">
+                    + <button class="filter-btn active" data-filter="all">All</button>
+                    + <button class="filter-btn" data-filter="wish">Wishes</button>
+                    + <button class="filter-btn" data-filter="memory">Memories</button>
+                    + <button class="filter-btn" data-filter="note">Notes</button>
+                    + <button class="filter-btn" data-filter="goal">Goals</button>
+                    + <button class="filter-btn" data-filter="gratitude">Gratitude</button>
+                    + </div>
+                + <div id="notesContainer" class="notes-container">
+                    + <p class="empty-state">No entries yet! Start writing your first one above! 🌈</p>
+                    + </div>
+                + </div>
+            + </div>
+        +
+        + <footer>
+            + <p>Made with 💖 in the spirit of the early 2000s</p>
+            + <div class="visitor-counter">
+                + <img src="https://stuff.charm.sh/counter/count.svg" alt="Visitor Counter" style="height: 20px;">
+                + </div>
+            + </footer>
+        + </div>
+    +
+    +
+    <script src="script.js"></script>
+    +
+</body>
++
+
+</html>

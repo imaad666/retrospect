@@ -1,89 +1,144 @@
-===================================================================
---- /dev/null
-+++ index.html
-@@ -0,0 +1,71 @@
-+
 <!DOCTYPE html>
-+<html lang="en">
-+
-
+<html lang="en">
 <head>
-    +
     <meta charset="UTF-8">
-    +
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    + <title>retro$pect</title>
-    +
+    <title>.:retro$pect:. ~ Your Personal Memory Space ~</title>
     <link rel="stylesheet" href="style.css">
-    +
 </head>
-+
-
 <body>
-    + <div class="container">
-        + <header>
-            + <h1>retro$pect</h1>
-            + <p class="tagline">~ Save your thoughts, wishes & memories ~</p>
-            + <div class="marquee">
-                + <marquee behavior="scroll" direction="left">Welcome to your personal space! 💫 Write your heart out!
-                    🌟 Come back anytime! 💖</marquee>
-                + </div>
-            + </header>
-        +
-        + <div class="main-content">
-            + <div class="add-note-section">
-                + <h2>📝 Add a New Entry</h2>
-                + <form id="noteForm">
-                    + <div class="form-group">
-                        + <label for="noteTitle">Title:</label>
-                        + <input type="text" id="noteTitle" placeholder="Give your entry a title..." required>
-                        + </div>
-                    + <div class="form-group">
-                        + <label for="noteCategory">Category:</label>
-                        + <select id="noteCategory">
-                            + <option value="wish">🌟 Wish</option>
-                            + <option value="memory">💭 Memory</option>
-                            + <option value="note">📌 Note</option>
-                            + <option value="goal">🎯 Goal</option>
-                            + <option value="gratitude">💖 Gratitude</option>
-                            + </select>
-                        + </div>
-                    + <div class="form-group">
-                        + <label for="noteContent">Your thoughts:</label>
-                        + <textarea id="noteContent" rows="6" placeholder="Write your heart out..." required></textarea>
-                        + </div>
-                    + <button type="submit" class="btn-submit">💾 Save Entry</button>
-                    + </form>
-                + </div>
-            +
-            + <div class="notes-section">
-                + <h2>📚 Your Entries</h2>
-                + <div class="filter-buttons">
-                    + <button class="filter-btn active" data-filter="all">All</button>
-                    + <button class="filter-btn" data-filter="wish">Wishes</button>
-                    + <button class="filter-btn" data-filter="memory">Memories</button>
-                    + <button class="filter-btn" data-filter="note">Notes</button>
-                    + <button class="filter-btn" data-filter="goal">Goals</button>
-                    + <button class="filter-btn" data-filter="gratitude">Gratitude</button>
-                    + </div>
-                + <div id="notesContainer" class="notes-container">
-                    + <p class="empty-state">No entries yet! Start writing your first one above! 🌈</p>
-                    + </div>
-                + </div>
-            + </div>
-        +
-        + <footer>
-            + <p>Made with 💖 in the spirit of the early 2000s</p>
-            + <div class="visitor-counter">
-                + <img src="https://stuff.charm.sh/counter/count.svg" alt="Visitor Counter" style="height: 20px;">
-                + </div>
-            + </footer>
-        + </div>
-    +
-    +
-    <script src="script.js"></script>
-    +
-</body>
-+
+    <!-- Classic 2000s table layout -->
+    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+            <td>
+                <!-- Header Banner -->
+                <table width="100%" border="0" cellpadding="10" cellspacing="0" class="header-table">
+                    <tr>
+                        <td align="center">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Ctext x='10' y='45' font-size='40'%3E📝%3C/text%3E%3C/svg%3E" alt="icon" width="60" height="60">
+                            <h1>.:retro$pect:.</h1>
+                            <p class="subtitle">~*~ Your Personal Memory Space ~*~</p>
+                            <marquee behavior="scroll" direction="left" scrollamount="3">
+                                ★ Welcome to retro$pect! ★ Save your memories, wishes & goals ★ Come back anytime! ★
+                            </marquee>
+                        </td>
+                    </tr>
+                </table>
 
+                <!-- Navigation Bar -->
+                <table width="100%" border="0" cellpadding="5" cellspacing="0" class="nav-table">
+                    <tr>
+                        <td align="center">
+                            <a href="#" class="nav-link">[ Home ]</a>
+                            <a href="#" class="nav-link">[ My Notes ]</a>
+                            <a href="#" class="nav-link">[ Add New ]</a>
+                            <a href="#" class="nav-link">[ About ]</a>
+                        </td>
+                    </tr>
+                </table>
+
+                <!-- Main Content Area -->
+                <table width="100%" border="0" cellpadding="20" cellspacing="0">
+                    <tr>
+                        <!-- Left Sidebar -->
+                        <td width="200" valign="top" class="sidebar">
+                            <div class="sidebar-box">
+                                <h3>✨ Quick Add ✨</h3>
+                                <form id="quickNoteForm">
+                                    <input type="text" id="quickTitle" placeholder="Title..." class="input-field">
+                                    <select id="quickCategory" class="input-field">
+                                        <option value="note">📌 Note</option>
+                                        <option value="wish">🌟 Wish</option>
+                                        <option value="memory">💭 Memory</option>
+                                        <option value="goal">🎯 Goal</option>
+                                    </select>
+                                    <textarea id="quickContent" rows="4" placeholder="Write here..." class="input-field"></textarea>
+                                    <button type="submit" class="btn-add">Add Note!</button>
+                                </form>
+                            </div>
+
+                            <div class="sidebar-box">
+                                <h3>🔍 Filter</h3>
+                                <button class="filter-btn active" data-filter="all">Show All</button>
+                                <button class="filter-btn" data-filter="note">Notes</button>
+                                <button class="filter-btn" data-filter="wish">Wishes</button>
+                                <button class="filter-btn" data-filter="memory">Memories</button>
+                                <button class="filter-btn" data-filter="goal">Goals</button>
+                            </div>
+
+                            <div class="sidebar-box">
+                                <h3>📊 Stats</h3>
+                                <p>Total Notes: <span id="totalNotes">0</span></p>
+                                <p>This Week: <span id="weekNotes">0</span></p>
+                            </div>
+                        </td>
+
+                        <!-- Main Content -->
+                        <td valign="top" class="main-content">
+                            <div class="content-header">
+                                <h2>📚 My Sticky Notes Board 📚</h2>
+                                <p class="welcome-text">
+                                    Welcome to your personal space! Click and drag your notes around. 
+                                    Each note is like a real sticky note from your desk! 💛💚💙💖
+                                </p>
+                            </div>
+
+                            <!-- Sticky Notes Container -->
+                            <div id="notesBoard" class="notes-board">
+                                <!-- Notes will be added here dynamically -->
+                                <div class="empty-message">
+                                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Ctext x='20' y='70' font-size='60'%3E📝%3C/text%3E%3C/svg%3E" alt="notes">
+                                    <p>No notes yet! Add your first one using the form on the left! →</p>
+                                </div>
+                            </div>
+                        </td>
+
+                        <!-- Right Sidebar -->
+                        <td width="180" valign="top" class="sidebar">
+                            <div class="sidebar-box">
+                                <h3>🎨 Colors</h3>
+                                <p>Click a color for your next note:</p>
+                                <div class="color-picker">
+                                    <button class="color-btn active" data-color="yellow" style="background: #ffff88;"></button>
+                                    <button class="color-btn" data-color="pink" style="background: #ffb3d9;"></button>
+                                    <button class="color-btn" data-color="blue" style="background: #a8d8ff;"></button>
+                                    <button class="color-btn" data-color="green" style="background: #b3ffb3;"></button>
+                                    <button class="color-btn" data-color="orange" style="background: #ffd699;"></button>
+                                    <button class="color-btn" data-color="purple" style="background: #e6b3ff;"></button>
+                                </div>
+                            </div>
+
+                            <div class="sidebar-box">
+                                <h3>💫 Online Now</h3>
+                                <p>👤 You</p>
+                                <p style="font-size: 0.8em; color: #666;">Last login: <span id="lastLogin">Today</span></p>
+                            </div>
+
+                            <div class="sidebar-box">
+                                <h3>🔗 Links</h3>
+                                <a href="#" class="sidebar-link">My Profile</a>
+                                <a href="#" class="sidebar-link">Settings</a>
+                                <a href="#" class="sidebar-link">Help</a>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+
+                <!-- Footer -->
+                <table width="100%" border="0" cellpadding="10" cellspacing="0" class="footer-table">
+                    <tr>
+                        <td align="center">
+                            <p>© 2000s retro$pect | Best viewed in 1024x768 | Made with ♥</p>
+                            <p style="font-size: 0.8em;">
+                                <img src="https://stuff.charm.sh/counter/count.svg" alt="visitors" height="15">
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <script src="script.js"></script>
+</body>
 </html>
